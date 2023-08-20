@@ -1,12 +1,12 @@
-package com.lucassouzati.rootjava.main.infrasctructure.repositories;
+package com.lucassouzati.rootjava.infrasctructure.repositories;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.lucassouzati.rootjava.main.application.repository.IAlunoRepository;
-import com.lucassouzati.rootjava.main.domain.entity.Aluno;
+import com.lucassouzati.rootjava.application.repository.IAlunoRepository;
+import com.lucassouzati.rootjava.domain.entity.Aluno;
 
 public class InMemoryAlunoRepository implements IAlunoRepository {
 

@@ -1,11 +1,11 @@
-package com.lucassouzati.rootjava.main.infrasctructure.console;
+package com.lucassouzati.rootjava.infrasctructure.console;
 
 import java.util.Scanner;
 
-import com.lucassouzati.rootjava.main.application.dto.InputAlunoDto;
-import com.lucassouzati.rootjava.main.application.dto.OutputAlunoDto;
-import com.lucassouzati.rootjava.main.application.services.AlunoService;
-import com.lucassouzati.rootjava.main.infrasctructure.repositories.InMemoryAlunoRepository;
+import com.lucassouzati.rootjava.application.dto.InputAlunoDto;
+import com.lucassouzati.rootjava.application.dto.OutputAlunoDto;
+import com.lucassouzati.rootjava.application.services.AlunoService;
+import com.lucassouzati.rootjava.infrasctructure.repositories.InMemoryAlunoRepository;
 
 public class GerenciadorDeNotas {
 

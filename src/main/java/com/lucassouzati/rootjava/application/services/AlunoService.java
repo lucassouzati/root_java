@@ -1,12 +1,12 @@
-package com.lucassouzati.rootjava.main.application.services;
+package com.lucassouzati.rootjava.application.services;
 
 import java.util.Optional;
 import java.util.logging.Logger;
 
-import com.lucassouzati.rootjava.main.application.dto.InputAlunoDto;
-import com.lucassouzati.rootjava.main.application.dto.OutputAlunoDto;
-import com.lucassouzati.rootjava.main.application.repository.IAlunoRepository;
-import com.lucassouzati.rootjava.main.domain.entity.Aluno;
+import com.lucassouzati.rootjava.application.dto.InputAlunoDto;
+import com.lucassouzati.rootjava.application.dto.OutputAlunoDto;
+import com.lucassouzati.rootjava.application.repository.IAlunoRepository;
+import com.lucassouzati.rootjava.domain.entity.Aluno;
 
 public class AlunoService {
 

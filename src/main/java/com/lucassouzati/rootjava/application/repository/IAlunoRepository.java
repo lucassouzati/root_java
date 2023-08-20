@@ -1,8 +1,8 @@
-package com.lucassouzati.rootjava.main.application.repository;
+package com.lucassouzati.rootjava.application.repository;
 
 import java.util.List;
 
-import com.lucassouzati.rootjava.main.domain.entity.Aluno;
+import com.lucassouzati.rootjava.domain.entity.Aluno;
 
 public interface IAlunoRepository {
 
