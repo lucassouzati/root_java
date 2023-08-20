@@ -1,16 +1,16 @@
-package infrasctructure.repositories;
+package com.lucassouzati.rootjava.main.infrasctructure.repositories;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import application.repository.IAlunoRepository;
-import domain.entity.Aluno;
+import com.lucassouzati.rootjava.main.application.repository.IAlunoRepository;
+import com.lucassouzati.rootjava.main.domain.entity.Aluno;
 
 public class InMemoryAlunoRepository implements IAlunoRepository {
 
-    public Long nextId = 1L;
+    private Long nextId = 1L;
     private Map<Long, Aluno> alunos = new LinkedHashMap<>();
 
     @Override

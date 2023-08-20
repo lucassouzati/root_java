@@ -1,15 +1,18 @@
-package application.services;
+package com.lucassouzati.rootjava.main.application.services;
 
 import java.util.Optional;
+import java.util.logging.Logger;
 
-import application.dto.InputAlunoDto;
-import application.dto.OutputAlunoDto;
-import application.repository.IAlunoRepository;
-import domain.entity.Aluno;
+import com.lucassouzati.rootjava.main.application.dto.InputAlunoDto;
+import com.lucassouzati.rootjava.main.application.dto.OutputAlunoDto;
+import com.lucassouzati.rootjava.main.application.repository.IAlunoRepository;
+import com.lucassouzati.rootjava.main.domain.entity.Aluno;
 
 public class AlunoService {
 
     private IAlunoRepository alunoRepository;
+
+    private static final Logger logger = Logger.getLogger(AlunoService.class.getName());
 
     public AlunoService(IAlunoRepository alunoRepository) {
         this.alunoRepository = alunoRepository;
@@ -30,7 +33,7 @@ public class AlunoService {
             this.alunoRepository.delete(aluno);
             return true;
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            logger.info(e.getMessage());
             return false;
         }
     }

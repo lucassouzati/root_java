@@ -1,4 +1,4 @@
-package domain.entity;
+package com.lucassouzati.rootjava.main.domain.entity;
 
 public class Aluno {
 

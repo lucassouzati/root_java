@@ -1,19 +1,18 @@
-package infrasctructure.console;
+package com.lucassouzati.rootjava.main.infrasctructure.console;
 
 import java.util.Scanner;
 
-import application.dto.InputAlunoDto;
-import application.dto.OutputAlunoDto;
-import application.services.AlunoService;
-import infrasctructure.repositories.InMemoryAlunoRepository;
+import com.lucassouzati.rootjava.main.application.dto.InputAlunoDto;
+import com.lucassouzati.rootjava.main.application.dto.OutputAlunoDto;
+import com.lucassouzati.rootjava.main.application.services.AlunoService;
+import com.lucassouzati.rootjava.main.infrasctructure.repositories.InMemoryAlunoRepository;
 
 public class GerenciadorDeNotas {
 
-    private static AlunoService alunoService;
+    private static final AlunoService alunoService = new AlunoService(new InMemoryAlunoRepository());
 
     public static void runSystem() {
 
-        alunoService = new AlunoService(new InMemoryAlunoRepository());
         boolean keepRunning = true;
         Scanner scanner = new Scanner(System.in);
 

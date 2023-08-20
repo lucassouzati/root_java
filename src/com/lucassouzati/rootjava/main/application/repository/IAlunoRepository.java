@@ -1,9 +1,8 @@
-package application.repository;
+package com.lucassouzati.rootjava.main.application.repository;
 
-import java.util.HashMap;
 import java.util.List;
 
-import domain.entity.Aluno;
+import com.lucassouzati.rootjava.main.domain.entity.Aluno;
 
 public interface IAlunoRepository {
 
