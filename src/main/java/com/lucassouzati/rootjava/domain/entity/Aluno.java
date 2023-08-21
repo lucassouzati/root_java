@@ -15,6 +15,12 @@ public class Aluno {
         this.notaFinal = notaFinal;
     }
 
+    public Aluno (Long id, String nome, Double notaFinal){
+        this.id = id;
+        this.nome = nome;
+        this.notaFinal = notaFinal;
+    }
+
     public Long getId(){
         return this.id;
     }

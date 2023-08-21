@@ -5,11 +5,12 @@ import java.util.Scanner;
 import com.lucassouzati.rootjava.application.dto.InputAlunoDto;
 import com.lucassouzati.rootjava.application.dto.OutputAlunoDto;
 import com.lucassouzati.rootjava.application.services.AlunoService;
+import com.lucassouzati.rootjava.infrasctructure.repositories.DatabaseAlunoRepository;
 import com.lucassouzati.rootjava.infrasctructure.repositories.InMemoryAlunoRepository;
 
 public class GerenciadorDeNotas {
 
-    private static final AlunoService alunoService = new AlunoService(new InMemoryAlunoRepository());
+    private static final AlunoService alunoService = new AlunoService(new DatabaseAlunoRepository());
 
     public static void runSystem() {
 
