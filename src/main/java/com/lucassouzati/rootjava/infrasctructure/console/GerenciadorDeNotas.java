@@ -29,7 +29,7 @@ public class GerenciadorDeNotas {
             String nome;
 
             switch (opcao) {
-                case ("1"):
+                case "1" ->{
                     System.out.println("Digite o nome do novo aluno:");
                     nome = scanner.next();
                     System.out.println("Digite a nota do novo aluno:");
@@ -38,10 +38,9 @@ public class GerenciadorDeNotas {
                     OutputAlunoDto novoAluno = alunoService.create(new InputAlunoDto(nome, nota));
 
                     System.out.println("Novo aluno criado:" + novoAluno);
+                }
 
-                    break;
-
-                case ("2"): {
+                case "2" -> {
                     System.out.println("Digite o nome do aluno a ser removido:");
                     nome = scanner.next();
 
@@ -50,10 +49,8 @@ public class GerenciadorDeNotas {
                     } else {
                         System.out.println("Houve um erro ao remover ao aluno.");
                     }
-
-                    break;
                 }
-                case ("3"): {
+                case "3" -> {
                     System.out.println("Digite o nome do aluno:");
                     nome = scanner.next();
 
@@ -64,24 +61,19 @@ public class GerenciadorDeNotas {
                         System.out.println(e.getMessage());
                     }
 
-                    break;
                 }
 
-                case ("4"): {
+                case "4" -> {
                     Double mediaAlunos = alunoService.retornaMediaDaTurma();
 
                     System.out.println("Média dos alunos: " + mediaAlunos.toString());
-
-                    break;
                 }
-                case("5"): {
+                case"5" -> {
                     System.out.println("Saindo do sistema...");
                     keepRunning = false;
-                    break;
                 }
-                default: {
+                default -> {
                     System.out.println("Opção inválida!");
-                    break;
                 }
             }
 
