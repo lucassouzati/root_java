@@ -5,12 +5,14 @@ import java.util.Scanner;
 import com.lucassouzati.rootjava.application.dto.InputAlunoDto;
 import com.lucassouzati.rootjava.application.dto.OutputAlunoDto;
 import com.lucassouzati.rootjava.application.services.AlunoService;
+import com.lucassouzati.rootjava.domain.entity.Aluno;
+import com.lucassouzati.rootjava.infrasctructure.files.FileCsvReader;
 import com.lucassouzati.rootjava.infrasctructure.repositories.DatabaseAlunoRepository;
 import com.lucassouzati.rootjava.infrasctructure.repositories.InMemoryAlunoRepository;
 
 public class GerenciadorDeNotas {
 
-    private static final AlunoService alunoService = new AlunoService(new DatabaseAlunoRepository());
+    private static final AlunoService alunoService = new AlunoService(new DatabaseAlunoRepository(), new FileCsvReader());
 
     public static void runSystem() {
 
@@ -23,6 +25,7 @@ public class GerenciadorDeNotas {
             System.out.println("2 - Remover aluno pelo nome ");
             System.out.println("3 - Mostrar nota do aluno pelo nome ");
             System.out.println("4 - Calcular média dos alunos ");
+            System.out.println("6 - Importar alunos CSV ");
             System.out.println("5 - Sair ");
 
             String opcao = scanner.next();
@@ -71,6 +74,10 @@ public class GerenciadorDeNotas {
                 case"5" -> {
                     System.out.println("Saindo do sistema...");
                     keepRunning = false;
+                }
+                case "6" -> {
+                    System.out.println("Alunos importados:");
+                    alunoService.retornaAlunosImportados().stream().forEach(a-> System.out.println(a.toString()));
                 }
                 default -> {
                     System.out.println("Opção inválida!");

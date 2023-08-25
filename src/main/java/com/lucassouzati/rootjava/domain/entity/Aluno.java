@@ -44,4 +44,9 @@ public class Aluno {
     public void setNotaFinal(Double notaFinal){
         this.notaFinal = notaFinal;
     }
+
+    @Override
+    public String toString(){
+        return "Nome: " + nome + "Nota final: " + notaFinal.toString();
+    }
 }

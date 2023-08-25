@@ -1,4 +1,4 @@
-package com.lucassouzati.rootjava.application.repository;
+    package com.lucassouzati.rootjava.application.repository;
 
 import java.util.List;
 
